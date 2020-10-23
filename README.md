@@ -29,11 +29,7 @@ npm install
 to go to the Heroku link down below to start using the app or to git clone this repo
 ![Heroku](Note-Taker.gif)
 
-## Tests
-n/a
-
 ## Contributors
-
 s2hon
 
 ## Questions
