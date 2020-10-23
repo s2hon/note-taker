@@ -80,7 +80,8 @@ app.delete('/api/notes/:id?', function(req, res){
         let x = req.params.endpoint;
         data = fs.readFileSync('Develop/db/db.json', 'utf-8');
         data =  JSON.parse(data);
-        data.splice(x, 1);
+        data = data.filter(function(data) {
+            return data.id != req.params.id});
         data = JSON.stringify(data);
         fs.writeFileSync('Develop/db/db.json', data, 'utf-8');
         res.json(JSON.parse(data));
