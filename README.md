@@ -27,7 +27,7 @@ npm install
 
 ## Usage
 to go to the Heroku link down below to start using the app or to git clone this repo
-![Heroku](screenshot.gif)
+![Heroku](Note-Taker.gif)
 
 ## Tests
 n/a
