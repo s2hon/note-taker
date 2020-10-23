@@ -77,10 +77,13 @@ app.post('/api/notes', function(req, res){
 
 app.delete('/api/notes/:id?', function(req, res){
     try{
-        let x = req.params.endpoint;
+        let x = req.params.id;
+        console.log(x);
         data = fs.readFileSync('Develop/db/db.json', 'utf-8');
-        data =  JSON.parse(data);
-        data = data.filter(data => {data.id !== data.x});
+        data = JSON.parse(data);
+        console.log(data);
+        data = data.filter(data => {return data.id.toString() !== x});
+        console.log(data);
         data = JSON.stringify(data);
         fs.writeFileSync('Develop/db/db.json', data, 'utf-8');
         res.json(JSON.parse(data));
